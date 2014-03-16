@@ -1,0 +1,36 @@
+<h1>City weather app</h1>
+
+<div id="searchPanelWrapper">
+    <!-- Container for cities hyperlink navigation-->
+    <div id="citiesBox"></div>
+    
+    <div id="formWrapper">
+        <!-- form for user to input city-->
+         <form id=search_form method=post action="#">
+            <label for=searchTextField>...OR enter a UK city:</label> 
+            <br />
+            <input id="searchTextField" type="text" data-bind="addressAutocomplete: Address, click: setLocation" />
+
+        </form>
+    </div>
+    <!-- Container for error panel-->
+    <div id="errorBox"></div>
+</div>
+
+<div id="weatherPanelWrapper">
+    <!-- Container for dynamic weather details-->
+    <div id="weatherHeader"><h3> Weather details!</h3></div>
+     <div id="weatherBox">
+     <p><span class="detailsTitle">City:</span>  <br/><span data-bind="text: cityName"></span></p> 
+     <p><span class="detailsTitle">Location</span>: <br/> [lat: <span data-bind="text: cityLat"></span>] [lon: <span data-bind="text: cityLon"></span>]</p> 
+	 <p><span class="detailsTitle">Weather condition:</span>  <br/><span data-bind="text: cityDescription"></span></p> 
+	
+	 <p><span class="detailsTitle">Humidity:</span>  <br/><span data-bind="text: cityHumidity"></span></p> 
+	 <p><span class="detailsTitle">Temparate:</span>  <br/><span data-bind="text: cityTemparate"></span></p> 
+	 <p><span class="detailsTitle">Min temperature:</span> <br/><span data-bind="text: cityTemp_min"></span></p>
+	 <p><span class="detailsTitle">Max temperature:</span>  <br/><span data-bind="text: cityTemp_max"></span> </p>
+	 <p><span class="detailsTitle">Pressure:</span>  <br/><span data-bind="text: cityPressure"></span></p>
+    </div>
+</div>
+
+
